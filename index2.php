@@ -4,42 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>QR Code Scanner</title>
-        <link href="css/styles.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" href="/css/styles.css">
+        <script type="text/javascript" src="/js/html5-qrcode.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <link rel="icon" type="image/x-icon" href="images/psa-philsys-logo.ico">
-        <style>
-            .circle {
-            width: 200px; /* Set the desired width */
-            height: 200px; /* Set the same height for a perfect circle */
-            border-radius: 50%; /* Makes the image circular */
-            overflow: hidden; /* Ensures overflow is hidden */
-            display: flex; /* Center content if needed */
-            justify-content: center;
-            align-items: center;
-            }
-
-            .circle img {
-                width: 100%; /* Makes the image responsive */
-                height: auto; /* Maintains aspect ratio */
-                object-fit: cover; /* Ensures the image covers the circle */
-            }
-
-            .rotating {
-                animation: rotate 4s linear infinite; /* Rotate continuously */
-            }
-
-            @keyframes rotate {
-                from {
-                    transform: rotate(0deg);
-                }
-                to {
-                    transform: rotate(360deg);
-                }
-            }
-        </style>
     </head>
     <body id="verify_wrapper">
         <div class="modal fade bd-example-modal-lg" id="modal-result" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -134,9 +104,9 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="https://liveness.everify.gov.ph/js/everify-liveness-sdk.min.js"></script>
-        <script type="text/javascript" src="./js/utils.js"></script>
-        <script type="text/javascript" src="./js/qr_scanner.js"></script>
-        <script type="text/javascript" src="./js/apis.js"></script>
-        <script type="text/javascript" src="./js/index.js"></script>
+        <script type="text/javascript" src="/js/utils.js"></script>
+        <script type="text/javascript" src="/js/qr_scanner.js"></script>
+        <script type="text/javascript" src="/js/apis.js"></script>
+        <script type="text/javascript" src="/js/index.js"></script>
     </body>
 </html>

@@ -83,6 +83,7 @@ const authenticate = (pcn, biometric_input) => {
         $("#module-loading").hide();
     })
     .catch(error => {
+        console.log(error);
         $("#error-message").html(`Error connecting to the server. Please try again.`);
         $("#modal-error").modal("show");
         
@@ -115,8 +116,8 @@ const eGovLivenessCheck = (first_name, middle_name, last_name, suffix, birth_dat
             })
         })
         .then(response => response.json())
-        .then(data => {            
-            if(data.error || !data.meta.result_grade) {
+        .then(data => {    
+            if(data.meta.result_grade != 1) {
                 alert("Authentication Failed");
             }
             else {

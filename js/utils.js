@@ -13,6 +13,39 @@ const convertDateFormat = (dateString) => {
     return formattedDate;
 }
 
+const convertDateFormat2 = (dateString) => {
+    const dateParts = dateString.split(' ');
+
+    const month_to_number = {
+        "January" : 1,
+        "February" : 2,
+        "March" : 3,
+        "April" : 4,
+        "May" : 5,
+        "June" : 6,
+        "July" : 7,
+        "August" : 8,
+        "September" : 9,
+        "October" : 10,
+        "November" : 11,
+        "December" : 12,
+    };
+
+    const month = month_to_number[dateParts[0]];
+    const day = dateParts[1].split(",")[0];
+    const year = dateParts[2];
+
+    const date = new Date(year, month - 1, day);
+
+    const formattedDate = date.getFullYear() + '-' + 
+                            String(date.getMonth() + 1).padStart(2, '0') + '-' +
+                            String(date.getDate()).padStart(2, '0');
+
+    console.log(formattedDate);
+
+    return formattedDate;
+}
+
 async function getCameras() {
     try {
         const cameras = await Html5Qrcode.getCameras();

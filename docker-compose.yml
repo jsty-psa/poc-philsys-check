@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  poc-philsys-check:
+    build: .
+    image: poc-philsys-check
+    container_name: poc-philsys-check
+    ports:
+      - "84:443"
+    # volumes:
+    #   - ./nginx/default.conf:/etc/nginx/nginx.conf 
+    #   - ./nginx/ssl_certs/:/etc/nginx/ssl_certs/
+    #   - ./supervisord.conf:/etc/supervisor/supervisord.conf

@@ -33,12 +33,26 @@ const qrCodeSuccessCallback = (decodedText) => {
 
     result = JSON.parse(decodedText);
 
-    const pcn = result.pcn;
-    const first_name = result.first_name;
-    const middle_name = result.middle_name;
-    const last_name = result.last_name;
-    const suffix = result.suffix;
-    const birth_date = convertDateFormat(result.birth_date);
+    console.log(decodedText);
+
+    console.log(result.subject);
+
+    // console.log(result.subject.Suffix);
+    // console.log(result.subject.lName);
+    // console.log(result.subject.fName);
+    // console.log(result.subject.mName);
+    // console.log(result.subject.sex);
+    // console.log(result.subject.BF);
+    // console.log(result.subject.DOB);
+    // console.log(result.subject.POB);
+    // console.log(result.subject.PCN);
+
+    const pcn = result.subject.PCN;
+    const first_name = result.subject.fName;
+    const middle_name = result.subject.mName;
+    const last_name = result.subject.lName;
+    const suffix = result.subject.Suffix == null ? "N/A" : result.subject.Suffix;
+    const birth_date = convertDateFormat2(result.subject.DOB);
 
     var auth_type = $("#auth-type").val();
 
